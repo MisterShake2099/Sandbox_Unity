@@ -30,3 +30,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Project Specific
+**/_Complete-Game
