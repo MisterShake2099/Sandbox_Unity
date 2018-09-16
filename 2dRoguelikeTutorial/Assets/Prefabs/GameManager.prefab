@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1927227262688386}
+  m_IsPrefabAsset: 1
+--- !u!1 &1927227262688386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4658459104826748}
+  - component: {fileID: 114959995434049340}
+  - component: {fileID: 114310731676006630}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4658459104826748
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927227262688386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114310731676006630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927227262688386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534ad74b775f506409cb0aabcdffe9d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 8
+  rows: 8
+  wallCount:
+    minimum: 5
+    maximum: 9
+  foodCount:
+    minimum: 1
+    maximum: 5
+  exit: {fileID: 1510953376637280, guid: 4dea03bdb512c06438148bd9b724a008, type: 2}
+  floorTiles:
+  - {fileID: 1461087323013164, guid: 829fe440d1f533742b03658d866e420f, type: 2}
+  - {fileID: 1244145453967146, guid: ea4ab32e79e632743b0207ad641ff14b, type: 2}
+  - {fileID: 1990197612683532, guid: df158cbb8d29cd5409796940fa68655c, type: 2}
+  - {fileID: 1994591713700610, guid: e672db88884ee3342833f5856ddea891, type: 2}
+  - {fileID: 1130282433759914, guid: 5e576fa5e1d9de84cb0bb30320c648b8, type: 2}
+  - {fileID: 1785564154305590, guid: 14818e42f547bc844adad52f442b3d8c, type: 2}
+  - {fileID: 1764905966500148, guid: 9139d7a3b7a3ec341922d0fc1ae63cd9, type: 2}
+  - {fileID: 1265448976117564, guid: 2d0d070852409124299ed0425725c6d8, type: 2}
+  wallTiles:
+  - {fileID: 1077334138332594, guid: 928a6a5058242344ea85acadbc05ea9a, type: 2}
+  - {fileID: 1842973855855366, guid: 3f0310f721eb3664f96923e07b2cf74b, type: 2}
+  - {fileID: 1458995840400428, guid: 9f58ca433401de84db7b145fca89382b, type: 2}
+  - {fileID: 1693693147100452, guid: ca80b6a2b4980424f8609d56f31b864c, type: 2}
+  - {fileID: 1537332421490136, guid: 9dde028e6ea31904fa2e9818244e234b, type: 2}
+  - {fileID: 1504140652579576, guid: f054eda5285303c4c8dac31011dead0a, type: 2}
+  - {fileID: 1320932269803908, guid: cddfd2d902fd5144d804920f308ce73e, type: 2}
+  - {fileID: 1551900029527760, guid: 84a754696c301b4469d3d5da7efbb18c, type: 2}
+  foodTiles:
+  - {fileID: 1567070998447448, guid: 9d6973878c0bc3d4ea5d7076d01d59a3, type: 2}
+  - {fileID: 1352293761488064, guid: ae77e8b9ae4a3de408616f58a7764562, type: 2}
+  enemyTiles:
+  - {fileID: 1777726237319086, guid: 774a24fcff690394998d7084eb0dab35, type: 2}
+  - {fileID: 1781473289746644, guid: 4279d3eaec35ed34894be806513fc064, type: 2}
+  outerWallTiles:
+  - {fileID: 1816371328342374, guid: 0a07152140a2f9c49a6e41afea4875cd, type: 2}
+  - {fileID: 1006448574965990, guid: 4ed162ed57709e84eb1a4451034806eb, type: 2}
+  - {fileID: 1927441832270058, guid: 6a370019c2a0f9b4ea961254346e3555, type: 2}
+--- !u!114 &114959995434049340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927227262688386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7190c481736917f44b0bce6213417d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
