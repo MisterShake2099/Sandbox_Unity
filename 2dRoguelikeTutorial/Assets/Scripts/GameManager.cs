@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     private readonly int level = 3;
 
-    // Use this for initialization
+
     void Awake()
     {
         if (instance == null)
@@ -30,11 +30,5 @@ public class GameManager : MonoBehaviour
     {
         BoardManager.SetupScene(level);
     }
-	
-	// Update is called once per frame
-	void Update()
-    {
-		
-	}
 
 }
