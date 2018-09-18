@@ -25,16 +25,16 @@ public class BoardManager : MonoBehaviour
 	public int columns = 8;
 	public int rows = 8;
 
-	public Count wallCount = new Count(5, 9);
-	public Count foodCount = new Count(1, 5);
-	public GameObject exit;
+    public GameObject[] enemyTiles;
+    public GameObject exit;
 	public GameObject[] floorTiles;
-	public GameObject[] wallTiles;
-	public GameObject[] foodTiles;
-	public GameObject[] enemyTiles;
+    public Count foodCount = new Count(1, 5);
+    public GameObject[] foodTiles;
 	public GameObject[] outerWallTiles;
+    public Count wallCount = new Count(5, 9);
+    public GameObject[] wallTiles;
 
-	private Transform boardHolder;
+    private Transform boardHolder;
 	private List<Vector3> gridPositions = new List<Vector3>();
 
 
@@ -86,6 +86,7 @@ public class BoardManager : MonoBehaviour
 		return randomPosition;
 	}
 
+
 	void LayoutObjectAtRandom(GameObject[] tileArray, int minimum, int maximum)
 	{
 		int objectCount = Random.Range(minimum, maximum + 1);
@@ -96,6 +97,7 @@ public class BoardManager : MonoBehaviour
 			Instantiate(tileChoice, randomPosition, Quaternion.identity);
 		}
 	}
+
 
 	public void SetupScene(int level)
 	{
@@ -109,5 +111,6 @@ public class BoardManager : MonoBehaviour
 
 		Instantiate(exit, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
 	}
+
 
 }

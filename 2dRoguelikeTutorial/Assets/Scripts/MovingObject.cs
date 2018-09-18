@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 public abstract class MovingObject : MonoBehaviour
 {
@@ -19,6 +19,7 @@ public abstract class MovingObject : MonoBehaviour
         inverseMoveTime = 1f / moveTime;
 	}
 	
+
     protected bool Move(int xDir, int yDir, out RaycastHit2D hit)
     {
         Vector2 start = transform.position;
@@ -37,11 +38,12 @@ public abstract class MovingObject : MonoBehaviour
         return false;
     }
 
+
     protected virtual void AttemptMove<T>(int xDir, int yDir)
         where T : Component
     {
         RaycastHit2D hit;
-        bool canMove = Move(xDir, yDir, out (hit));
+        bool canMove = Move(xDir, yDir, out(hit));
 
         if (hit.transform == null)
         {
@@ -55,6 +57,7 @@ public abstract class MovingObject : MonoBehaviour
             OnCannotMove(hitComponent);
         }
     }
+
 
     protected IEnumerator SmoothMovement(Vector3 end)
     {
@@ -71,7 +74,9 @@ public abstract class MovingObject : MonoBehaviour
         }
     }
 
+
     protected abstract void OnCannotMove<T>(T component)
         where T : Component;
+
 
 }
