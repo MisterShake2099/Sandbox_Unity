@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using UnityEngine;
 
 
@@ -18,7 +19,6 @@ public abstract class MovingObject : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         inverseMoveTime = 1f / moveTime;
 	}
-	
 
     protected bool Move(int xDir, int yDir, out RaycastHit2D hit)
     {
@@ -37,7 +37,6 @@ public abstract class MovingObject : MonoBehaviour
 
         return false;
     }
-
 
     protected virtual void AttemptMove<T>(int xDir, int yDir)
         where T : Component
@@ -58,7 +57,6 @@ public abstract class MovingObject : MonoBehaviour
         }
     }
 
-
     protected IEnumerator SmoothMovement(Vector3 end)
     {
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
@@ -74,9 +72,7 @@ public abstract class MovingObject : MonoBehaviour
         }
     }
 
-
     protected abstract void OnCannotMove<T>(T component)
         where T : Component;
-
 
 }

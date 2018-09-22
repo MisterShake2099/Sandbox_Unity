@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 public class Enemy : MovingObject
 {
@@ -9,6 +8,9 @@ public class Enemy : MovingObject
     private Animator animator;
     private bool skipMove;
     private Transform target;
+
+	public AudioClip enemyAttack1;
+	public AudioClip enemyAttack2;
     
 
 	protected override void Start()
@@ -18,7 +20,6 @@ public class Enemy : MovingObject
         target = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
 	}
-
 
     protected override void AttemptMove<T>(int xDir, int yDir)
     {
@@ -32,7 +33,6 @@ public class Enemy : MovingObject
 
         skipMove = true;
     }
-
 
     public void MoveEnemy()
     {
@@ -51,12 +51,13 @@ public class Enemy : MovingObject
         AttemptMove<Player>(xDir, yDir);
     }
 
-
     protected override void OnCannotMove<T>(T component)
     {
         Player hitPlayer = component as Player;
-        animator.SetTrigger("enemyAttack");
-        hitPlayer.LoseFood(playerDamage);
+		hitPlayer.LoseFood(playerDamage);
+
+		animator.SetTrigger("enemyAttack");
+		SoundManager.instance.RandomizeSfx(enemyAttack1, enemyAttack2);
     }
 
 }
